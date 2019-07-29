@@ -143,10 +143,6 @@ function removeFromLS(linkItem) {
   }
 
   links.forEach(function(link, index) {
-    /* console.log(link);
-    console.log(linkItem.children[0].textContent);
-    console.log(link.name);*/
-
     if (linkItem.children[0].textContent === link.name) {
       links.splice(index, 1);
     }
