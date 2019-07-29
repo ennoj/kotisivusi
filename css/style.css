@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.my-container {
+  width: 100vw;
+  height: 100vh;
+  /* CSS Smooth Scroll */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* SCROLL SNÄPPI */
+  scroll-snap-align: center;
+}
+
+#clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.stripe {
+  width: 100vw;
+  max-width: 100%;
+  background-color: rgba(65, 65, 65, 0.521);
+  padding-bottom: 4vh;
+}
+
+#time {
+  font-size: 8rem;
+  text-shadow: 2px 2px 4px rgba(49, 49, 49, 0.9);
+}
+
+#dmy {
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 4px rgba(49, 49, 49, 0.9);
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+#content {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 2.5vh 3vw;
+  overflow: auto;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.tight-grid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-gap: 1.2rem;
+  margin: 2vh 0 4vh 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1.6fr 0.4fr;
+  grid-template-rows: 1fr;
+  grid-gap: 4em;
+  grid-template-areas: 'common-links user-links';
+}
+
+.user-links {
+  grid-area: user-links;
+}
+
+.common-links {
+  grid-area: common-links;
+}
+
+.link-icon img {
+  height: 50px;
+}
+
+.link-icon img:hover {
+  box-shadow: 0px 0px 6px 1px rgba(224, 224, 224, 0.8);
+  transition-duration: 200ms;
+}
+
+.modal {
+  min-height: 70vh;
+  max-height: 90vh;
+}
+
+/*    OMAT LINKIT     */
+.collection {
+  border: none;
+}
+
+.collection-item {
+  background-color: rgba(255, 255, 255, 0.747) !important;
+  border-radius: 2px;
+  margin-bottom: 12px !important;
+}
+
+.collection-item a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0f2027;
+}
+
+.collection-item:hover {
+  box-shadow: 0px 0px 6px 1px rgba(224, 224, 224, 0.8);
+  transition-duration: 200ms;
+}
+
+.delete-item {
+  color: rgb(150, 0, 0);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(49, 49, 49, 0.9);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.1rem;
+  text-shadow: 2px 2px 4px rgba(49, 49, 49, 0.9);
+  opacity: 0.8;
+}
+
+h3 {
+  margin: 0.1rem;
+  font-size: 1.3rem;
+  color: rgb(241, 241, 241);
+}
+
+h4 {
+  font-size: 2rem;
+  color: #333;
+}
