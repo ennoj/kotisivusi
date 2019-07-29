@@ -204,17 +204,17 @@ function setBgGreet() {
   if (hour < 12) {
     // AAMU
     document.getElementById('clock').style.backgroundImage =
-      "url('../img/morning.jpg')";
+      "url('./img/morning.jpg')";
     greeting.textContent = 'Hyvää huomenta, ';
   } else if (hour < 18) {
     // ILTAPÄIVÄ
     document.getElementById('clock').style.backgroundImage =
-      "url('../img/afternoon.jpg')";
+      "url('./img/afternoon.jpg')";
     greeting.textContent = 'Hyvää iltapäivää, ';
   } else {
     // ILTA
     document.getElementById('clock').style.backgroundImage =
-      "url('../img/night.jpg')";
+      "url('./img/night.jpg')";
     greeting.textContent = 'Hyvää iltaa, ';
     document.getElementById('clock').style.color = 'white';
   }
