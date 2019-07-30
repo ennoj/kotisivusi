@@ -35,13 +35,15 @@ function getLinks() {
     const a = document.createElement('a');
     const deleteLink = document.createElement('a');
 
-    // Lisää href ja nimeä linkki (a)
+    // Lisää href ja bänkki + nimeä linkki (a)
     a.href = link.url;
+    a.target = '_blank';
     a.appendChild(document.createTextNode(link.name));
 
-    // Lisää classit
+    // Lisää classit ja kursorin sormi
     li.className = 'collection-item';
     deleteLink.className = 'delete-item secondary-content';
+    deleteLink.style = 'cursor: pointer';
 
     // Iconin sisältö
     deleteLink.innerHTML = '<i class="material-icons">remove_circle</i>';
@@ -178,7 +180,7 @@ function showTime() {
 function showDmy() {
   let today = new Date(),
     d = today.getDate(),
-    m = today.getMonth(),
+    m = today.getMonth() + 1,
     y = today.getFullYear();
 
   // NÄYTÄ PVM
@@ -197,21 +199,26 @@ function setBgGreet() {
   let today = new Date(),
     hour = today.getHours();
 
-  if (hour < 12) {
+  if (hour > 5 && hour < 12) {
     // AAMU
     document.getElementById('clock').style.backgroundImage =
       "url('./img/morning.jpg')";
     greeting.textContent = 'Hyvää huomenta, ';
-  } else if (hour < 18) {
-    // ILTAPÄIVÄ
+  } else if (hour > 11 && hour < 18) {
+    // PÄIVÄ
     document.getElementById('clock').style.backgroundImage =
       "url('./img/afternoon.jpg')";
-    greeting.textContent = 'Hyvää iltapäivää, ';
-  } else {
+    greeting.textContent = 'Hyvää iltaa, ';
+  } else if (hour > 17 && hour <= 23) {
     // ILTA
     document.getElementById('clock').style.backgroundImage =
-      "url('./img/night.jpg')";
+      "url('./img/evening.jpg')";
     greeting.textContent = 'Hyvää iltaa, ';
+  } else {
+    // YÖ
+    document.getElementById('clock').style.backgroundImage =
+      "url('./img/night.jpg')";
+    greeting.textContent = 'Hyvää yötä, ';
     document.getElementById('clock').style.color = 'white';
   }
 }

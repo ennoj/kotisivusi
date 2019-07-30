@@ -135,7 +135,7 @@ section {
 
 .collection-item:hover {
   box-shadow: 0px 0px 6px 1px rgba(224, 224, 224, 0.8);
-  transition-duration: 200ms;
+  transition-duration: 300ms;
 }
 
 .delete-item {
