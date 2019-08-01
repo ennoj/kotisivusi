@@ -208,7 +208,7 @@ function setBgGreet() {
     // PÄIVÄ
     document.getElementById('clock').style.backgroundImage =
       "url('./img/afternoon.jpg')";
-    greeting.textContent = 'Hyvää iltaa, ';
+    greeting.textContent = 'Hyvää päivää, ';
   } else if (hour > 17 && hour <= 23) {
     // ILTA
     document.getElementById('clock').style.backgroundImage =
